@@ -7,4 +7,4 @@ COPY app.py model.pt ./
 
 # expose a port (Render will set $PORT)
 EXPOSE 8000
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "$PORT"]
+CMD uvicorn app:app --host 0.0.0.0 --port $PORT
